@@ -9,8 +9,9 @@ const signupValidation = (req,res,next)=>{
         contactnumber: Joi.string().pattern(/^\d{10}$/).required(),
         password: Joi.string().min(4).max(100).required()
     });
-    
+    console.log('Validating signup data:', req.body);
     const {error} = schema.validate(req.body);
+    console.log('Validation result:', error);   
     if (error)
     {
         return res.status(400)

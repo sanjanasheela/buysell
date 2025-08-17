@@ -22,7 +22,7 @@ const deliverRouter = require('./routes/deliverRouter');
 const chatbotRouters = require('./routes/chatbot');
 require('dotenv').config();
 require('./models/db');
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8000;
 
 app.get('/ping',(req,res)=>{
     res.send('PONG');
